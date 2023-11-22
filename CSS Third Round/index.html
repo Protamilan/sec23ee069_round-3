@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="head">
+            <img src="./assets/images.jpg" height="130px" alt="">
+            <h1>Electronic Space</h1>
+            <p>Space is a three-dimensional continuum containing positions and directions.[1] In classical physics, physical space is often conceived in three linear dimensions. Modern physicists usually consider it, with time, to be part of a boundless four-dimensional continuum known as spacetime.</p>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Services</li>
+                <li>Gallery</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="hero">
+            <img src="./assets/hero.jpg"  width="100%">
+            <h4>Space is an inspirational concept </h4>
+        </div>
+        <div class="about">
+            <p>We often refer to our expanding universe with one simple word: space. But where does space begin and, more importantly, what is it?
+
+                Space is an almost perfect vacuum, nearly void of matter and with extremely low pressure. In space, sound doesn't carry because there aren't molecules close enough together to transmit sound between them. Not quite empty, bits of gas, dust and other matter floats around "emptier" areas of the universe, while more crowded regions can host planets, stars and galaxies.
+                
+                From our Earth-bound perspective, outer space is most often thought to begin about 62 miles (100 kilometers) above sea level at what is known as the Kármán line. This is an imaginary boundary at an altitude where there is no appreciable air to breathe or scatter light. Passing this altitude, blue starts to give way to black because oxygen molecules are not in enough abundance to make the sky blue.
+                
+                </p>
+        </div>            
+            <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./assets/caro1.jpg" style="width:100%">
+              <div class="text">Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is enabled by Earth being a water world, the only one in the Solar System sustaining liquid surface water. Almost all of Earth's water is contained in its global ocean, covering 70.8% of Earth's crust.</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./assets/caro3.jpg" style="width:100%">
+              <div class="text">A galaxy is a system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity.</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./assets/caro2.jpg" style="width:100%">
+              <div class="text">A star is an astronomical object comprising a luminous spheroid of plasma held together by self-gravity.</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <div class="footer">
+                <ul>
+                    <li>Facebook</li>
+                    <li>Whatsapp</li>
+                    <li>Instagram</li>
+                </ul>
+                <p>© EEE Rockerzzz</p>
+                <p>2023</p>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Back to tops</button>
+
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+            </script>
+            
+
+    
+</body>
+</html>
